@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div id="form-div">
+            <form autocomplete="off"> 
+                <div class="field">
+                    <div class="left">
+                        <label for="source">Select your source : </label>
+                        <div class="line"></div>
+                    </div>
+                    <div class="right">
+                        <h5>Google Cloud Storage</h5>
+                    </div>
+                </div>
+                <div class="field">
+                    <div class="left">
+                        <label for="">Provide a name for pipeline:</label>
+                        <div class="line"></div>
+                    </div>
+                    <div class="right">
+                        <input type="text" name="pipelineName" id="pipeline"
+                            required placeholder="e.g., cust_shop_energy_gkateway001">
+                    </div>
+                </div>
+                <div class="field">
+                    <div class="left">
+                        <label for="">GCS project name :</label>
+                        <div class="line"></div>
+                    </div>
+                    <div class="right">
+                        <input type="text" name="projectName" id="project" required placeholder="project-id">
+                    </div>
+                </div>
+                <div class="field">
+                    <div class="left">
+                        <label for="">GCS bucket name :</label>
+                        <div class="line"></div>
+                    </div>
+                    <div class="right">
+                        <input type="text" name="bucketname" id="bucket" required placeholder="gs://your-bucket">
+                    </div>
+                </div>
+                <div class="field">
+                    <div class="left">
+                        <label for="">Input Cloud Storage File(s) :</label>
+                        <div class="line"></div>
+                    </div>
+                    <div class="right">
+                        <input type="text" name="storageFile" id="file" required placeholder="GCS location of your files">
+                            <h4>Example: <br> gs://your-bucket/your-files/01.csv</h4>
+                    </div>
+                </div>
+                <div class="field">
+                    <div class="left">
+                        <label for="">GCS credentials :</label>
+                        <div class="line"></div>
+                    </div>
+                    <div class="right">
+                        <input type="text" name="credentials"  required ="credentials" style="background-color: rgb(162, 159, 159)" >
+                    </div>
+                </div>
+                <div class="field">
+                    <div class="left">
+                        <label for="">Run Every :</label>
+                        <div class="line"></div>
+                    </div>
+                    <div class="right">
+                        <input type="text" name="" id="runEvery" required placeholder="(in minutes)">
+                    </div>
+                </div>
+                <div class="field">
+                    <div class="left">
+                        <button type="submit">Create</button>
+                    </div>
+                    <div class="right">
+                        <button type="reset">Cancel</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
